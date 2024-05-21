@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    overflow-x: hidden; /* Código significa que todo conteúdo que ultrapassar o tamanho da tela na horizontal não será visível. X- Horizontal / Y- Vertical */
+}
+
 .container {
     max-width: 1024px;
     width: 100%;
@@ -13,13 +17,14 @@
 
 header {
     background-color: #192a56;
-    padding: 16px 0;
+    padding-top: 16px;
     color: #fff;
 }
 
 nav {
     background-color: #575fcf;
     padding: 16px 0;
+    display: none; /* Display none significa que ele não está visível*/
 }
 
 nav li{
@@ -34,4 +39,53 @@ nav li{
 nav li a{
     color: #fff;
     text-decoration: none;
+}
+
+.menu-hamburguer {
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+header > .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+} /* Apenas vai puxar o .container "filho" herdado diretamente do header*/
+
+.container-flex {
+    display: flex;
+}
+
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-veiculos li {
+    list-style: none;
+    max-width: 30%;
+}
+
+.lista-veiculos li img {
+    max-width: 100%;
+}
+
+.lista-veiculos li h3 {
+    margin: 16px 0;
 }
